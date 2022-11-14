@@ -8,6 +8,8 @@ while True:
         break
     palabra = usr_palabra.split(":")
     diccionario[palabra[0]] = palabra[1]
-    print(palabra)
-frase = input("Introduzca una frase en Español para traducir al Ingles")
-
+    print(diccionario)
+frase = input("Introduzca una frase en Español para traducir al Ingles: \n")
+frase = frase.split(" ")
+for es in frase:
+    print(es.replace(es, diccionario[es]), end=" ")
