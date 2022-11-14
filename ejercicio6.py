@@ -9,8 +9,8 @@ print("         [3] Mostrar Alumno")
 print("         [4] Mostrar Base de Datos")
 print("         [5] Mostrar Lista de Aprobados")
 print("         [6] Termninar Programa")
-
-if input() == 1:
+print("--------------------------------------------")
+if int(input()) == 1:
     nif = input("DNI del nuevo alumno:\n")
     nombre = input("Nombre del nuevo alumno:\n")
     apellidos = input("Apellidos del nuevo alumno: \n")
@@ -27,6 +27,6 @@ if input() == 1:
     dic_nif = {}
     dic_nif[nif] = datos
     base_datos.append(dic_nif)
-
-else:
-    print("Error")
+elif int(input()) == 2:
+    x = input("NIF del Alumno que desea eleminar: \n")
+    base_datos.remove(x)
